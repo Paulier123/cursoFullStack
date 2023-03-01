@@ -2,7 +2,7 @@
 body {
     font-family: 'Josefin Sans' ;
     /* background-image: linear-gradient(to right, rgb(50, 69, 247), rgb(102, 220, 228)); */
-    background-image: url(controle.jpg)  ;
+    background-image: linear-gradient(to right,rgb(233, 202, 199),rgb(113, 113, 204))  ;
     width: 100%;
     height: 100%;
   
@@ -17,6 +17,7 @@ body {
     align-items:center;
     padding: 5px 6px;
     margin: auto;
+
     
 }
 
