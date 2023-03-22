@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+    <h2>Controle financeiro</h2>
+
+       <div class="boxReceita">
+           
+               <p> Receita: <input type="number" id="txreceita"> <input type="button" value="Adicionar"onclick="adicionar()"></p>
+                <select name="tabela" id="txtabela">
+                    <option></option>
+                </select>
+           
+        </div >
+
+        <div class="boxDespesa">
+
+            <p> Despesa: <input type="number" id="txdespesa"> <input type="button" value="Adicionar" onclick="adicionar()"></p>
+            <select name="tabela" id="txtabela2"></select>
+            
+        </div>
+        
+        <div class="boxFechamento">
+            <h2>Fechamento</h2>
+            <p><input type="button" value="Fechar mês"></p>
+
+        </div>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>

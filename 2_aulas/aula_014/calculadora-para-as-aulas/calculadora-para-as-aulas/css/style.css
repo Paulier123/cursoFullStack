@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header,
+footer {
+  width: 100%;
+  background-color: #282828;
+  text-align: center;
+  color: #fff;
+}
+
+header {
+  padding: 15px 0;
+  border-bottom: 10px solid #ff9900;
+}
+
+footer {
+  padding: 8px 0;
+  border-top: 10px solid #0091ff;
+}
+
+main {
+  width: 50vw;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 1px 1px 7px #00000033;
+  border-left: 3px solid #ff9100;
+  border-bottom: 3px solid #0091ff;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main div#numeros {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.num {
+  width: 48%;
+  text-align: center;
+}
+
+div.num input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 30px;
+  border: solid 1.9px #2828281f;
+
+}
+
+div.num input:focus {
+  outline: none;
+  border: 2px solid #9dd5ff;
+  box-shadow: 0 0 5px #9dd5ff;
+}
+
+main div#numeros div.operador {
+  height: 50%;
+  background-color: #fff;
+  text-align: center;
+  padding: 6px;
+  margin: 0 15px;
+}
+
+main div#numeros div.operador p {
+  font-size: 2em;
+  line-height: 8px;
+  font-weight: 900;
+  color: #FF0000;
+}
+
+main div#botoes {
+  width: 100%;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+main div#botoes .btn {
+  width: 24%;
+  padding: 5px 0;
+  background-color: #3ba0ff;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 30px;
+  border: solid 1.9px #2828281f;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+}
+
+main div#botoes .btn:hover {
+  background-color: #80c2ff;
+}
+
+main div#result {
+  width: 100%;
+  text-align: center;
+}
+
+main div#result .result-titulo {
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #525252;
+}
+
+main div#result .result-caixa {
+  height: 200px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main div#result .result-caixa p {
+  font-size: 4em;
+  font-weight: 800;
+  color: #0084ff;
+}
