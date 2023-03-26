@@ -1,36 +1,113 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+
 body {
-    font-family: 'Josefin Sans' ;
-    /* background-image: linear-gradient(to right, rgb(50, 69, 247), rgb(102, 220, 228)); */
-    background-image: url(./Imagnes/controle.jpg);
+    font-family: 'Josefin Sans';  
     text-align: center;
-    -moz-box-align: center;
-     
+    background-image: url(./Imagnes/controle.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+header {
+    background-color: rgb(78, 76, 76);
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    padding: 10px;
     
 }
-.boxReceita  {
-
-    filter: blur(1px);
+header h1{
+    color: aliceblue;
 }
-.boxReceita   {
-    background: green;
-    position: fixed;
+
+.boxLançamento {
+    
+    background:rgb(78, 76, 76) ;    
     top: 50px;
-    width: 500px;
-    height: 100px;
+    width: 60%;
+    height: 50%;
     border-radius: 40px;
     text-align: center;
     padding: 15px;
-
+    margin: auto;
+    box-shadow: 10px 10px 10px grey;
 }
-.boxDespesa{
-    background: red;
-    position: fixed;
+
+.textinput{
+    font-family: 'Josefin Sans'; 
+    border: none;
+    height: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    
+}
+
+.BttReceita{
+    background-color: green;
+    width: auto;
+    height: 25px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    font-family: 'Josefin Sans';  
+    margin: 5px;
+    
+}
+.BttDespesa{
+    background-color: rgb(255, 0, 0);
+    width: auto;
+    height: 25px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    font-family: 'Josefin Sans';  
+    margin: 5px;
+    
+}
+
+.BttReceita:hover{
+    background-color: rgb(78, 214, 78);
+    transition: all,1s;
+    
+}
+
+.BttDespesa:hover{
+    background-color: rgb(243, 98, 98);
+    transition: all,1s;
+}
+
+.boxLançamento{
+    display: inline-block;
+    margin: 15px;
+    padding: auto;
+}
+
+footer{
+    
+    position:  fixed;
+    bottom: 10px;
+    left: 25px;
+    color: black;
+    
+}
+.tabela{
+    background:transparent ;    
     top: 50px;
-    left: 600px;
-    width: 500px;
-    height: 100px;
-    border-radius: 40px;
+    width: 80%;
+    height: 50%;
     text-align: center;
     padding: 15px;
+    margin: auto;
+    box-shadow: 10px 10px 10px grey; 
+
 }

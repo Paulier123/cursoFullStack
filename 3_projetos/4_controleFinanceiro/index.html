@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,33 +8,44 @@
     <title>Controle Financeiro</title>
 </head>
 <link rel="stylesheet" href="style.css">
+
 <body>
+    <header>
+        <h1>Controle financeiro</h1>
+    </header>
+    <main>
 
-    <h2>Controle financeiro</h2>
+        <div class="boxLançamento">
 
-       <div class="boxReceita">
-           
-               <p> Receita: <input type="number" id="txreceita"> <input type="button" value="Adicionar"onclick="adicionar()"></p>
-                <select name="tabela" id="txtabela">
-                    <option></option>
-                </select>
-           
-        </div >
+            <h3>
+                <p>Novo Lançamento: </p>
+            </h3>
 
-        <div class="boxDespesa">
-
-            <p> Despesa: <input type="number" id="txdespesa"> <input type="button" value="Adicionar" onclick="adicionar()"></p>
-            <select name="tabela" id="txtabela2"></select>
-            
-        </div>
-        
-        <div class="boxFechamento">
-            <h2>Fechamento</h2>
-            <p><input type="button" value="Fechar mês"></p>
+            <p> <input type="number" id="txreceita" class="textinput"> <input type="button" class="BttReceita"
+                    value="Nova Receita (+)" onclick="adicionar()"></p>
+            <p> <input type="button" value="Nova Despesa (-)" class="BttDespesa" onclick="adicionar()"></p>
 
         </div>
 
-   
+        <div class="tabela">
+            <table>
+                <tr>
+                    <th>Teste</th>
+                    <th>TEs2</th>
+                </tr>
+                <tr>
+                    <td>Filho do teste</td>
+                    <td>Filho do teste2</td>
+                </tr>
+            </table>
+        </div>
+
+    </main>
+    <footer>
+        &copy; - Paulier Rodrigues | 2023
+    </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>
