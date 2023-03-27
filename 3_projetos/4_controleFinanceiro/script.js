@@ -3,9 +3,9 @@ const lancamento = Number(document.querySelector('.textinput').value)
 const novaReceita = document.querySelector('.BttReceita')
 const novaDespesa = document.querySelector('.BttDespesa')
 const tabela = document.querySelector(".tabela")
+const totValores = []
 
 novaReceita.addEventListener('click', function adiciobaDespesa(){
-    const totValores = []
     totValores.push(lancamento)
     tabela.innerHTML =+ `${totValores}`
 })
