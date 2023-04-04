@@ -1,0 +1,116 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255); 
+    text-align: center;   
+    
+}
+body {
+
+    color: #000;
+    background: linear-gradient(#082D0F,#5B8C5A);  
+
+}
+
+body p {
+    padding: 20px;
+
+}
+
+img {
+    padding: 20px;
+    border-radius: 200px;
+}
+h1 {
+    font-size: 2em;
+    padding: 20px;
+}
+
+h2 {
+    padding: 20px;
+}
+
+ul {
+    font-size: 1em;
+    width: 100vw;
+    height: 60px;
+    background-color: #5E807F;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    padding: 15px;
+
+}
+.card1:hover{
+    transition: all, 1s;
+    background-color: #17B890;
+}
+.card2:hover{
+    transition: all, 1s;
+    background-color: #17B890;
+}
+.card3:hover{
+    transition: all, 1s;
+    background-color: #17B890;
+}
+
+.card1 {
+    width: 20%;
+    background-color: #8FBC94;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px black;
+
+}
+
+.card2 {
+    width: 20%;
+    background-color: #8FBC94;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px black;
+
+}
+
+.card3 {
+    width: 20%;
+    background-color: #8FBC94;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px black;
+
+}
+
+.table1 {
+    width: 60%;
+    height: 200px;
+    background-color: #8FBC94;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px black;
+
+}
+
+.formContato{    
+    width: 50%;
+    height: 200px;    
+    background-color: #8FBC94;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px black;
+
+}
+.card1,
+.card2,
+.card3,
+.table1,
+.formContato {
+    display: inline-table;
+    text-align: center;
+    justify-content: center;
+    margin: 15px;
+}
