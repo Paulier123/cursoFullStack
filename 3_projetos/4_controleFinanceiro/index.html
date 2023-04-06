@@ -14,50 +14,44 @@
         <h1>Painel de Controle financeiro</h1>
     </header>
     <main>
-        <div class="totalLancamentos">
-            <p>
+        <div class="conteudo">
+            <div class="totalLancamentos">
+                <p>
                 <h2>Balanço R$:</h2>
-            </p>
+                </p>
+                <p class="totvalor">0,00</p>
+            </div>
+            <div class="boxLançamento">
+                <h3>
+                    <p>Novo Lançamento: </p>
+                </h3>
+                <input type="number" class="textinput"></p>
+                <p>
+                    <input type="button" class="BttReceita" value="Nova Receita (+)" onclick="adcionarReceita()">
+                    <input type="button" class="BttDespesa" value="Nova Despesa (-)" onclick="adcionarDespesa()">
+                </p>
 
-            <p class="totvalor">0,00</p>
-        </div>
-       
 
-        <div class="boxLançamento">
+            </div>
+            <div class="totReceitas">
+                <p>Total de receitas R$:</p>
+                <p>0,00</p>
+            </div>
+            <div class="totDespesas">
+                <p>Total de despesas R$:</p>
+                <p>0,00</p>
+            </div>
+            <div>
+                <h2>
+                    <p>Histórico de lançamentos</p>
+                </h2>
 
-            <h3>
-                <p>Novo Lançamento: </p>
-            </h3>
-
-             <input type="number" id="txreceita" class="textinput"> <input type="button" class="BttReceita"
-                    value="Nova Receita (+)" onclick="adicionar()">
-             <input type="button" value="Nova Despesa (-)" class="BttDespesa" onclick="adicionar()"></p>
-
-        </div>
-        <div class="totReceitas">
-            <p>Total de receitas R$:</p>
-            <p>0,00</p>
-        </div>
-        <div class="totDespesas">
-            <p>Total de despesas R$:</p>
-            <p>0,00</p>
-        </div>
-
-        <div class="tabela">
-            <h2>
-                <p>Histórico de lançamentos</p>
-            </h2>
-            
-            <table>
-                <tr>
-                    <th>Teste</th>
-                    <th>TEs2</th>
-                </tr>
-                <tr>
-                    <td>Filho do teste</td>
-                    <td>Filho do teste2</td>
-                </tr>
-            </table>
+                <table class="tabela">
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
     </main>
