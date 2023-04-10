@@ -1,5 +1,5 @@
 const totalLancamentos = document.querySelector(".totvalor")
-const totValor = document.querySelector(".totvalor")
+let totValor = document.querySelector(".totvalor")
 const novoLancamento = document.querySelector(".boxLançamento")
 let BttReceita = document.querySelector(".BttReceita")
 const BttDespesa = document.querySelector(".BttDespesa")
@@ -27,9 +27,11 @@ function iniciaControle() {
         tabela.innerHTML += `Nova Despesa adicionada R$ ${novaLinha}`
     }
     balanco = () => {
+        let textInput = Number(document.querySelector(".textinput").value)
+        novaLinha.push(textInput)
         let totBalanco = document.createElement('p')
-        totValor.appendChild(totBalanco)
-        totValor.innerHTML += `${novaLinha}`
+        totalLancamentos.appendChild(totBalanco)        
+        totalLancamentos.innerHTML = `${novaLinha}`
     
         }
  
