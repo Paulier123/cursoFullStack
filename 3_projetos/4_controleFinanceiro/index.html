@@ -13,14 +13,14 @@
     <header>
         <h1>Painel de Controle financeiro</h1>
     </header>
-    <main>
+    <main> 
         <div class="conteudo">
-            <div class="totalLancamentos">
-                <p>
+            <div id="totalLancamentos">                
                 <h2>Balanço R$:</h2>
-                </p>
-                <p class="totvalor">0,00</p>
+
+                <div id="displayBalanco">0,00</div>             
             </div>
+
             <div class="boxLançamento">
                 <h3>
                     <p>Novo Lançamento: </p>
@@ -29,6 +29,7 @@
                 <p>
                     <input type="button" class="BttReceita" value="Nova Receita (+)" onclick="adcionarReceita()">
                     <input type="button" class="BttDespesa" value="Nova Despesa (-)" onclick="adcionarDespesa()">
+                   
                 </p>
 
 

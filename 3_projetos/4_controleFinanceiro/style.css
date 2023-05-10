@@ -8,7 +8,7 @@
 }
 
 
-body {
+body { 
     font-family: 'Josefin Sans';  
     text-align: center;
     background: rgb(169, 193, 221)   
@@ -30,7 +30,8 @@ header h1{
 
 
 
-.totalLancamentos{
+
+#totalLancamentos{
     background:rgba(226, 223, 223,0.5);    
     top: 50px;
     width: 65%;
@@ -43,7 +44,13 @@ header h1{
     margin-bottom: 30px;
     box-shadow: 10px 10px 10px grey;
 }
-.totvalor{
+#displayBalanco{
+    margin: 15px;
+    font-size: 3em;
+
+}
+
+#totvalor{
     font-size: 3em;
     padding: 15px;
 }

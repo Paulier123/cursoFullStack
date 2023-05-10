@@ -1,5 +1,5 @@
-const totalLancamentos = document.querySelector(".totvalor")
-let totValor = document.querySelector(".totvalor")
+
+let totValor = document.getElementById("displayBalanco")
 const novoLancamento = document.querySelector(".boxLançamento")
 let BttReceita = document.querySelector(".BttReceita")
 const BttDespesa = document.querySelector(".BttDespesa")
@@ -15,27 +15,50 @@ function iniciaControle() {
         let textInput = Number(document.querySelector(".textinput").value)
         novaLinha.push(textInput)
         let adicionarLinha = document.createElement('td')
-        tabela.appendChild(adicionarLinha)        
-        tabela.innerHTML += `Nova Receita adicionada R$ ${novaLinha}`
-        
+        tabela.appendChild(adicionarLinha)
+        tabela.innerHTML += `Receita adicionada R$ ${novaLinha[novaLinha.length - 1]}`
+        criaBalanco()
+        calculaReceita()
+
     }
     adcionarDespesa = () => {
         let textInput = Number(document.querySelector(".textinput").value)
-        novaLinha.push(textInput)
+        novaLinha.push(textInput * -1)
         let adicionarLinha = document.createElement('td')
         tabela.appendChild(adicionarLinha)
-        tabela.innerHTML += `Nova Despesa adicionada R$ ${novaLinha}`
+        tabela.innerHTML += `Despesa adicionada R$ ${novaLinha[novaLinha.length - 1]}`
+        criaBalanco()
+
     }
-    balanco = () => {
-        let textInput = Number(document.querySelector(".textinput").value)
-        novaLinha.push(textInput)
-        let totBalanco = document.createElement('p')
-        totalLancamentos.appendChild(totBalanco)        
-        totalLancamentos.innerHTML = `${novaLinha}`
-    
-        }
- 
+
 }
+
+function criaBalanco() {
+    let somatorio = novaLinha.reduce(function (acumulador, valorAtual) {
+        return acumulador + valorAtual
+    }, 0)
+    let criaParagrafo = document.createElement(`p`)
+    totValor.appendChild(criaParagrafo)
+    totValor.innerHTML = `${somatorio}`
+}
+
+function calculaReceita(){
+    let criaReceita = document.createElement('p')
+    totReceitas.appendChild(criaReceita)
+    for (const receita of novaLinha) {       
+         if(receita>0){
+            let somaDeReceita = novaLinha.reduce(function(acumulador,valorAtual){
+                return acumulador+valorAtual
+            },0)
+            totReceitas.innerHTML=`${somaDeReceita}`
+        }
+        
+    }
+    
+        
+    }
+
+
 
 iniciaControle()
 
