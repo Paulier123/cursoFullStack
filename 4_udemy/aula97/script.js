@@ -3,6 +3,7 @@
 function validar() {
     let result = document.querySelector('.result')
     let btn = document.querySelector('.btnVerificar')
+    // let cpf = document.querySelector('.cpftext')
     let cpf = '15389752708'
 
     //remover todo conteudo que não for numero
@@ -21,17 +22,17 @@ function validar() {
     let arrayCpfInverso = []
     for (i = arrayCpf.length - 1; i >= 0; i--) {
         arrayCpfInverso.push(arrayCpf[i])
-    }
+    }  
 
-    // console.log(arrayCpfInverso)
+    let novoArray = []
 
-    criaNovoArray = () => {
+    function criaNovoArray(){
         //percorrer o array e multiplicar o indice de 2 a 10
-        let novoArray = []
-        
+        if(novoArray==""){
+        return result.innerText = "Digite o CPF"
+        }else{
         arrayCpfInverso.forEach((valor, indice) => {
             novoArray.push((indice + 2) * valor)
-
         })
         
     //Somar o resultado da multiplicação
@@ -41,15 +42,15 @@ function validar() {
             })
             return array
         }
-        
+        function dividirporOnze(number){
+            return divOnze = number - (somarNovoArray(novoArray) % number)
+                    }
         // Dividir o resultado por 11
-        let divOnze = 11 - (somarNovoArray(novoArray) % 11)
-
+        dividirporOnze(11)
         console.log(divOnze)
-    }
-
-    
-
+    } 
+}
+criaNovoArray()
 
     //verifica se o resultado é maior que 9
     if (divOnze > 9) {
