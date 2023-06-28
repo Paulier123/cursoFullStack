@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.esquerda{
+    display: flex;  
+    justify-content: space-between;
+    
+    
+}
+.centro{
+    display: flex;  
+    justify-content: center   
+      
+}
+.direita{
+    display: flex;  
+    justify-content: space-between;
+       
+}
+
+.quadrado-esquerda{
+   
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+       
+}
+.quadrado-centro{
+    width: 100px;
+    height: 100px;
+    background-color: grey; 
+   
+}
+.quadrado-direita{
+    width: 100px;
+    height: 100px;
+    background-color: grey;    
+}
+.quadrado-esquerda, .quadrado-centro, .quadrado-direita{
+    margin-bottom: 50px;
+
+}

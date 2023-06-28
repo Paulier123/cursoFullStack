@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    background-color: #52489C;
+
+}
+li {
+    font-size: 20px;
+    display: inline-block;
+    background-color: #F24236;
+    width: 100%;
+    
+}
+/*hover ao passar o mouse*/
+li a:hover{
+    
+    color: olive;
+    transition: all,1s;
+}

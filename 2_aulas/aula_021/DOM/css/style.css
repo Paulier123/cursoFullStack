@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   justify-content: center;
+   align-items: center;
+}
+
+div#circulo{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: red;
+    justify-content: center;
+}
+h1.titulo{
+    background-color: yellow;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+
+}
+h1.titulo:hover{
+    background-color: red;
+
+}
+table{
+    border-collapse: collapse;
+}
+table
+th,
+td{
+    border: 1px, solid, black;
+}

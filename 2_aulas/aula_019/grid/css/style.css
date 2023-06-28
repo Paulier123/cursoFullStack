@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "main aside aside"
+        "footer footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 20vh 70vh 10vh;
+    /* grid-gap:10px */
+    gap: 5px;
+}
+header,
+main,
+aside,
+footer {
+    background-color: rgb(177, 233, 233);
+}
+
+header#header {
+    background-color: blueviolet;
+    grid-area: header;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */ 
+    /* 3 porque existem 2 colunas então a ultima seria a 3 */
+
+}
+
+main#main {
+    background-color: blue;
+    grid-area: main;
+
+}
+
+aside#aside {
+    background-color: brown;
+    grid-area: aside;
+
+}
+
+
+footer#footer {
+    background-color: yellow;
+    grid-area: footer;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+}

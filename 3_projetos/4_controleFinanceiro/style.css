@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+
+body { 
+    font-family: 'Josefin Sans';  
+    text-align: center;
+    background: rgb(169, 193, 221)   
+ 
+}
+
+
+header {
+    background-color: rgba(78, 76, 76,0.5);
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    padding: 10px;
+    
+}
+header h1{
+    color: aliceblue;
+}
+h1{
+    font-size: 2em;
+}
+
+
+
+
+#totalLancamentos{
+    background:rgba(226, 223, 223,0.5);    
+    top: 50px;
+    width: 65%;
+    height: 150px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 10px grey;
+}
+#displayBalanco{
+    margin: 15px;
+    font-size: 3em;
+
+}
+
+#totvalor{
+    font-size: 3em;
+    padding: 15px;
+}
+.totReceitas{
+    background-color: rgb(59, 121, 59);
+    font-size: 2em;
+}
+.totDespesas{
+    
+    background-color: rgb(179, 87, 87);
+    font-size: 2em;
+}
+
+.totReceitas, .totDespesas{
+    display: inline-block;
+    width: 35%;
+    height: 50%;   
+    padding: 15px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 15px;
+
+}
+
+.boxLançamento {
+    
+    background:rgba(226, 223, 223,0.5);    
+    top: 50px;
+    width: 65%;
+    height: 50%;
+    border-radius: 3px;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+.textinput{
+    font-family: 'Josefin Sans'; 
+    font-size: larger;
+    height: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    
+}
+.BttReceita, .BttDespesa{
+    display: inline-block;
+    font-size: 15pt;
+}
+
+.BttReceita{
+    background-color: green;
+    width: auto;
+    height: 70%;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    font-family: 'Josefin Sans';  
+    margin: 5px;
+    
+}
+.BttDespesa{
+    background-color: rgb(255, 4, 4);
+    width: auto;
+    height: 70%;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    font-family: 'Josefin Sans';  
+    margin: 5px;
+    
+}
+
+
+.BttReceita:hover{
+    background-color: rgb(78, 214, 78);
+    transition: all,0.1s;
+    
+}
+
+.BttDespesa:hover{
+    background-color: rgb(245, 124, 124);
+    transition: all,0.1s;
+}
+
+.boxLançamento{
+    display: inline-block;
+    margin: 15px;
+    padding: auto;
+}
+
+footer{
+    
+    position:  fixed;
+    bottom: 10px;
+    left: 25px;
+    color: black;
+    
+}
+.tabela{
+    background:rgba(226, 223, 223,0.5);    
+    top: 50px;
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 10px 10px 10px grey; 
+
+}
