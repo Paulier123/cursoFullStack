@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;;AAAAA,MAAM,CAACC,KAAK,CAAC,CAAC,CAAC,C","sources":["webpack://aula116/./src/index.js"],"sourcesContent":["window.alert(1)"],"names":["window","alert"],"sourceRoot":""}
