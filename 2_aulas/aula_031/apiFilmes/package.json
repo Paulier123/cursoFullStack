@@ -1,0 +1,13 @@
+{
+  "name": "apifilmes",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "Paulier",
+  "license": "MIT",
+  "start":"nodemon server.js port:4442",
+  "scripts": {"dev":"nodemon src/server.js"},
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}

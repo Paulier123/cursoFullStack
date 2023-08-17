@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gerador de senhas</title>
+    <link rel="stylesheet" href="../src/assets/css/style.css">
 </head>
 <body>
-    <script src="./assets/js/bundle.js"></script>
+    <section class="container">
+        <h1>Gerador de senhas</h1>
+        <br>
+            <div class="senhagerada">Selecione as opções...</div>
+        </br>
+        <br>Quantidade de caracteres <input type="number" min="1" max="50" class="qtd-caracteres"></br>
+        <br>Adicionar maiusculas <input type="checkbox" checked class="chk-maiusculas"></br>
+        <br>Adicionar minuculas <input type="checkbox" checked class="chk-minusculas"></br>
+        <br>Adicionar numeros <input type="checkbox" checked class="chk-numeros"></br>
+        <br>Adicionar simbolos <input type="checkbox" checked class="chk-simbolos"></br>
+        <br><button class="gerar-senha">Gerar senha</button></br>
+    </section>
 </body>
 </html>
