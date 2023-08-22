@@ -4,9 +4,12 @@
   "main": "server.js",
   "author": "Paulier",
   "license": "MIT",
-  "start":"nodemon server.js port:4442",
-  "scripts": {"dev":"nodemon src/server.js"},
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "start": "nodemon server.js port:4442",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "nodemon": "^3.0.1"
   }
