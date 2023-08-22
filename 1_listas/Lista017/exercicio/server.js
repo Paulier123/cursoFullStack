@@ -2,6 +2,22 @@ const express = require('express');
 const app = express();
 const port = 8585
 app.use(express.json())
+ app.get('/hello',(req,res)=>{
+  res.status(201).send(`Hello`)
+ })
+
+ app.post('/message',(req,res)=>{
+ res.status(201).send(`Message`)
+ })
+
+ app.put('/update',(req,res)=>{
+	res.status(201).send(`Objeto alterado com sucesso`)
+
+ })
+
+ app.delete('/delete',(req,res)=>{
+res.status(201).send("Objeto deletado com sucesso")
+ })
 
 const users =[
 		{
