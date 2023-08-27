@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 3000
+const dotenv = require('dotenv')
+dotenv.config()
+
+const PORT = process.env.PORT || 3535
 
 const usuarioscontroller = {
 
@@ -22,8 +25,8 @@ const usuarioscontroller = {
 
 
 
-app.listen(port, ()=>{
-console.log(`Servidor rodando no link: http://localhost:${port}`)
+app.listen(PORT, ()=>{
+console.log(`Servidor rodando no link: http://localhost:${PORT}`)
 })
 
 module.exports = usuarioscontroller
