@@ -40,6 +40,9 @@ const usersController = {
         }else{
             res.status(404).send(`<h1>Usuário não encontrado</h1>`)
         }     
+    }),
+    adicionaUsuarios : app.post('/user',(req,res)=>{
+        res.status(200).send('usárioadicionado')
     })
 }
 

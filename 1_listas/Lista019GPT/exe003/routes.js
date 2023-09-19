@@ -4,4 +4,4 @@ const usersController = require('./server.js');
 
 router.get = ('/', usersController.listarUsuarios);
 router.get = ('/users/:id',usersController.usuarioId); 
-
+router.post = ('/users',usersController.adicionaUsuarios)
