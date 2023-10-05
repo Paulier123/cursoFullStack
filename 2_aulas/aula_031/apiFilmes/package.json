@@ -5,7 +5,11 @@
   "author": "Paulier",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "criar-banco":"sequelize db:create",
+    "criar-migration":"sequelize migration:create --name=criar-tabela",
+    "executar-migration":"sequelize db:migrate",
+    "defazer-migration":"sequelize db:migrate:undo"
   },
   "start": "nodemon server.js port:4442",
   "dependencies": {
