@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true}))
 //Routers
 
 const router = require('./routes/productRouter.js')
-app.use('/api/prodicts', router)
+app.use('/api/products', router)
 
 //testtando
 app.get('/', (req,res)=>{

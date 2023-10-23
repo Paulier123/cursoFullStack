@@ -10,9 +10,10 @@ module.exports = (sequelize,DataTypes)   => {
         preco: {
             type: DataTypes.INTEGER
         },
-        description:{
+        descricao:{
             type: DataTypes.TEXT
-        }
+        },
+
     })
 return Product
 }

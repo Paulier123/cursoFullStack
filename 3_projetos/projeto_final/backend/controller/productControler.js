@@ -6,7 +6,9 @@ const Product = db.products
 
 //1.Criar o produto
 
-const adicionarProduto = async (req,res)=>{
+const productController = { //sempre criar uma variável ...controller e dentro dela informar os produtos, teitei fazer cada produto com uma variáve, mas o node gerou erros dizendo que a o Router.get dentro do arquivo de roteamento precisa de uma callback e tinha um objeto indefinido.
+
+ adicionarProduto : async (req,res)=>{
     let info = {
         titulo: req.body.titulo,
         preco: req.body.preco,
@@ -14,40 +16,37 @@ const adicionarProduto = async (req,res)=>{
     }
     const product = await Product.create(info) // vai criar o produto com base na informação
     res.status(200).send(product)
-}
+},
 
 //2.selecionar todos produtos
 
-const selecionarProdutos = async(req,res)=>{
+selecionarProdutos : async(req,res)=>{
     let products = await Product.findAll({})
     res.send(products).status(200)
-}
+},
 
 // 3.selecionar produto
-const  selecionatProduto = async(req,res)=>{
+ selecionatProduto : async(req,res)=>{
     let id = req.params.id
     let product = await Product.findOne({where: {id:id}})
     res.status(200).send(product)
-}
+},
 
 // 4.Atualizar Produto
 
-const atualizarProduto = async(req,res)=>{
+ atualizarProduto : async(req,res)=>{
     let id = req.param.id
     const product = await Product.update(req.body, {whre:{id:id}})
     res.status(200).send(product)
-}
+},
 
 // 5. deletar produto
 
-const deletarProduto = async(req,res)=>{
+ deletarProduto: async(req,res)=>{
     let id = req.params.id
     const product = await Product.destroy({whre:{id:id}})
     res.staus(200).send(`Produto deletado`)
 }
+}
 
-module.exports = adicionarProduto,
-selecionarProdutos,
-selecionatProduto,
-atualizarProduto,
-deletarProduto
+module.exports = productController
