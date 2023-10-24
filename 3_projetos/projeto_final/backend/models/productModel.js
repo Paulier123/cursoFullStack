@@ -1,8 +1,9 @@
 
 // Aqui criamos o modelo para a construçao do produto 
 
-module.exports = (sequelize,DataTypes)   => {
-    const Product = sequelize.define("product",{
+module.exports = (sequelize,DataTypes) => {
+
+    const Product = sequelize.define("product", {
         titulo: {
             type: DataTypes.STRING,
             allowNull: false
