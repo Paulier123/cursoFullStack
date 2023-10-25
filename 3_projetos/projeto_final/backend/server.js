@@ -4,7 +4,7 @@ const app = express()
 const port = 3538
 
 let corsOptions = {
-    orign: 'https://localhost:3537'
+    orign: 'https://localhost:3538'
 }
 
 //Middlewares
@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true}))
 // app.use(cors(corsOptions))
 
 
-//Routers
+//Routers 
 
 const router = require('./routes/productRouter.js')
 app.use('/api/products', router)
