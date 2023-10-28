@@ -8,18 +8,16 @@ const {Sequelize, DataTypes} = require('sequelize')
 const sequelize = new Sequelize(
     dbConfig.DB,
     dbConfig.USER,
-    dbConfig.PASSWORD,{
+    dbConfig.PASSWORD,    
+    {
         host: dbConfig.HOST,
-        dialect:dbConfig.DIALECT,
-        // operatorsAliases:false, ficou ultrapassado
-        
-    pool: {
-        max: dbConfig.pool.max,
-        min: dbConfig.pool.min,
-        acquire: dbConfig.pool.acquire,
-        idle: dbConfig.pool.idle
-    }
-    }
+        dialect:dbConfig.DIALECT,     
+ 
+    },
+    dbConfig.dateFormat
+
+    
+    
 )
 sequelize.authenticate()
 .then(()=>{

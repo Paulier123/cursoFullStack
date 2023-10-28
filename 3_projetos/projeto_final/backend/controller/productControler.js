@@ -11,9 +11,9 @@ const productController = { //sempre criar uma variável ...controller e dentro 
  adicionarProduto : async (req,res)=>{
 
     let info = {
-        titulo: req.body.titulo,
-        preco: req.body.preco,
-        descricao: req.body.descricao
+        descricao: req.body.descricao,
+        valor: req.body.valor,
+        data: req.body.data
     }
     const product = await Product.create(info) // vai criar o produto com base na informação
     res.status(200).send(product)
@@ -50,4 +50,4 @@ selecionarProdutos : async(req,res)=>{
 }
 }
 
-module.exports = productController
+module.exports = productController 

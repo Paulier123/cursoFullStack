@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+</head>
+<!-- <link rel="stylesheet" href="../src/css/style.css"> -->
+
+<body>
+    <header>
+        <h1>Painel de Controle financeiro</h1>
+    </header>
+    <main>
+        <div class="conteudo">
+            <div id="totalLancamentos">
+                <h1>Balanço R$:</h1>
+
+                <div id="displayBalanco">0,00</div>
+            </div>
+
+            <div class="boxLançamento">
+                <h3>
+                    <p>Novo Lançamento: </p>
+                </h3>
+                <p>
+                    <input type="text" class="textDescricao" placeholder="Descrição">
+                    <input type="number" class="textinput" placeholder="valor">
+                    <input type="date" class="textData" placeholder="data">
+                <p>
+                    <input type="button" class="BttReceita" value="Nova Receita (+)">
+                    <input type="button" class="BttDespesa" value="Nova Despesa (-)">
+                </p>
+
+
+            </div>
+            <div class="totReceitas">
+                <h3>Total de entradas R$:</h3>
+                <p class="totreceitasLancamento">0,00</p>
+            </div>
+
+            <div class="totDespesas">
+                <h3>Total de saídas R$:</h3>
+                <p class="totDespesaLancamento">0,00</p>
+            </div>
+
+            <div>
+                <h2>
+                    <p>Histórico de lançamentos</p>
+                </h2>
+                <div id="container-lancamento">
+                    <template id="lacamento-template">
+                        <table class="lancamentos">
+                            <tr>
+                                <td class="descricao">Descrição: <span></span></td>
+                            </tr>
+                            <hr>
+                            <tr>
+                                <td class="valor">Valor: <span></span></td>
+                            </tr>
+
+                            <tr>
+                                <td class="data">Data: <span></span></td>
+                            </tr>
+
+                        </table>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        &copy; - Paulier Rodrigues | 2023
+    </footer>
+
+    <script src="../src/js/script.js"></script>
+</body>
+
+</html>

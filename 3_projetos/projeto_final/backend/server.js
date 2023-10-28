@@ -10,7 +10,7 @@ let corsOptions = {
 //Middlewares
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-// app.use(cors(corsOptions))
+app.use(cors(corsOptions))
 
 
 //Routers 
@@ -26,4 +26,4 @@ app.get('/', (req,res)=>{
 //Escutar a porta configurada
 app.listen(port, () => {
 console.log(`servidor rodando em: http://localhost:${port}`)
-})
+}) 
