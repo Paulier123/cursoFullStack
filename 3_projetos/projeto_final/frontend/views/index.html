@@ -33,6 +33,10 @@
                     <input type="button" class="BttReceita" value="Nova Receita (+)">
                     <input type="button" class="BttDespesa" value="Nova Despesa (-)">
                 </p>
+                <div class="exclusao">
+                    <p><input type="button" value="Excluir lanlamento" class="txdelete">
+                    <input type="text" placeholder="informe o ID" class="txtId"></p>
+                </div>
 
 
             </div>
@@ -53,19 +57,24 @@
                 <div id="container-lancamento">
                     <template id="lacamento-template">
                         <table class="lancamentos">
+                           
                             <tr>
-                                <td class="descricao">Descrição: <span></span></td>
+                                <td class="descricao">Descrição do lançamento: <span></span></td>
                             </tr>
                             <hr>
                             <tr>
-                                <td class="valor">Valor: <span></span></td>
+                                <td class="valor">Valor : <span></span></td>
                             </tr>
 
                             <tr>
-                                <td class="data">Data: <span></span></td>
+                                <td class="data">Data do lançamento: <span></span></td>
                             </tr>
-
+                            <tr>
+                                <td class="id">ID: <span></span></td>
+                            </tr>
+                            
                         </table>
+                        
                     </template>
                 </div>
             </div>

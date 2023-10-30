@@ -3,11 +3,11 @@ const criarLancamento = (item) => {
     const template = document.getElementById('lacamento-template')
     const lancamentoElemento = document.importNode(template.content, true)
     const itens_lancamento = lancamentoElemento.querySelectorAll('span')
-
+   
     itens_lancamento[0].innerText = item.descricao
-    itens_lancamento[1].innerText = item.valor
-    itens_lancamento[2].innerText = item.data
-
+    itens_lancamento[1].innerText = "R$ "+item.valor
+    itens_lancamento[2].innerText = new Date(item.data).toLocaleDateString('PT-BR')
+    itens_lancamento[3].innerText = item.id
     return lancamentoElemento
 }
 
@@ -20,34 +20,27 @@ const carregarPagina = async () => {
 
 //pra cada item desse array
     dados.forEach(item => {
-
         const containerLancamento = document.getElementById('container-lancamento') 
         const lancamentoElemento = criarLancamento(item)
+        
         containerLancamento.append(lancamentoElemento)
+        
     })
 }
+function reloadPage(){
+location.reload
+}
 
-
+//Adicionar novo lançamento
 const novoLancamento = async () =>{
     const lancamentoNomeDescricao = document.querySelector('.textDescricao')
     const lancamentoNomeValor = Number(document.querySelector('.textinput').value)
-    const lancamentoNomeData = document.querySelector('.textData')
-
-
-    const teste = "27/04/1993"
-    const dataBr = new Date(teste)
-    const ano = Number(dataBr.getFullYear().value)
-    const mes = Number(dataBr.getMonth().value)
-    const dia = Number(dataBr.getDate().value)       
-    const novaDataFormatada = `${ano}/${mes}/${dia}`
-    console.log(novaDataFormatada)
-
-
-
+    const data = document.querySelector('.textData')
+    const lancamentoNomeData = data.value
     const lancamento = {
-        descricao: String(lancamentoNomeDescricao).value,
-        valor: lancamentoNomeValor,
-        data: novaDataFormatada
+        descricao: String(lancamentoNomeDescricao.value),
+        valor: Number(lancamentoNomeValor),
+        data: lancamentoNomeData
     }
     const init = {
         method: 'POST',
@@ -56,20 +49,38 @@ const novoLancamento = async () =>{
         },
         body: JSON.stringify(lancamento)
     }
-    //chamar POST na API
-    
+
+    //chamar POST na API    
     const response = await fetch(' http://localhost:3538/api/products/adicionarProduto', init)
     const dados = await response.json()
-
     const containerLancamento = document.getElementById('container-lancamento') 
     const lancamentoElemento = criarLancamento(dados)
     containerLancamento.append(lancamentoElemento)
-
 }
 
+//Deletar lançamento
+
+const excluirLacamento = async () => {    
+    //chamar delete na API
+    const txtId = document.querySelector('.txtId').value
+    const response = await fetch(`http://localhost:3538/api/products/${txtId}`, {
+        method: 'DELETE',
+    headers:{
+        "Content-Type": 'application/json' 
+}})
+   
+}
+
+//Carregar página
 window.onload = () => {
-    carregarPagina()
+    carregarPagina() 
+     
     const btnNovoLancamento = document.querySelector('.BttReceita')
-    btnNovoLancamento.onclick = novoLancamento    
+    btnNovoLancamento.onclick = novoLancamento
+
+    const btnDelete = document.querySelector('.txdelete')
+    btnDelete.onclick = excluirLacamento
+
     console.log("iniciado") 
 } 
+
