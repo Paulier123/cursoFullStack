@@ -10,7 +10,7 @@ let corsOptions = {
 //Middlewares
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-app.use(cors(corsOptions))
+app.use(cors(corsOptions)) 
 
 
 //Routers 
@@ -21,7 +21,7 @@ app.use('/api/products', router)
 //testando
 app.get('/', (req,res)=>{
     res.send(`Hello World`)
-})
+})   
 
 //Escutar a porta configurada
 app.listen(port, () => {

@@ -70,6 +70,31 @@ const excluirLacamento = async () => {
 }})
    
 }
+// Atualizar lançamento
+
+const atualizaLancamento = async () =>{
+    const id = document.querySelector(Number('.informaID').value)
+    const descricaoAtualizada =document.querySelector('.txtatualizaDescricao')
+    const valorAtulizado = document.querySelector(Number('.txatatualizaValor').value)
+    const dataAtualizada = document.querySelector('.txtatualizaData').value
+    
+
+    const lancamentoAtualizado = {
+        
+        descricao: String(descricaoAtualizada.value),
+        valor: Number(valorAtulizado).value,
+        data: dataAtualizada
+    }
+    const init = { 
+        method: 'PUT', 
+        headers:{
+            "Content-Type": 'application/json'
+        },
+        body: JSON.stringify(lancamentoAtualizado)
+    }
+    // Chamar PUT API
+    const response = await fetch(`http://localhost:3538/api/products/${id}`, init)
+}
 
 //Carregar página
 window.onload = () => {
@@ -80,6 +105,9 @@ window.onload = () => {
 
     const btnDelete = document.querySelector('.txdelete')
     btnDelete.onclick = excluirLacamento
+
+    const btnAtuliza = document.querySelector('.btnAtualiza')
+    btnAtuliza.onclick = atualizaLancamento
 
     console.log("iniciado") 
 } 
