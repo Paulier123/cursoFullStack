@@ -1,24 +1,29 @@
 
 // Aqui criamos o modelo para a construçao do produto 
 
+const { Sequelize } = require(".")
+
 module.exports = (sequelize,DataTypes) => {
 
-    const Product = sequelize.define("product", {
+    const Product = sequelize.define("product", {      
+
         descricao: {
             type: DataTypes.STRING,
-            // allowNull: false
+            allowNull: false
         },
         valor: {
-            type: DataTypes.INTEGER
-            
+            type: DataTypes.DECIMAL(10,2),         
+            allowNull: false            
         },
         data:{
-            type: DataTypes.DATE
+            type: DataTypes.DATE 
+            
         },
-
+       
     })
-return Product 
+return Product
 }
+
 
 
 

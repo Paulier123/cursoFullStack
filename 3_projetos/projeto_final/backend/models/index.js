@@ -13,13 +13,10 @@ const sequelize = new Sequelize(
         host: dbConfig.HOST,
         dialect:dbConfig.DIALECT,     
  
-    },
-    dbConfig.dateFormat
-
-    
+    }   
     
 )
-sequelize.authenticate()
+sequelize.authenticate() 
 .then(()=>{
     console.log('...conectando')
 }).catch((err)=>{
@@ -37,4 +34,4 @@ db.sequelize.sync({force: false}) // importante porque se for true vai perder as
     console.log('re-sync completo!')
 })
 
-module.exports = db
+module.exports = db 

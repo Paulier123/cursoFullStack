@@ -50,4 +50,4 @@ selecionarProdutos : async(req,res)=>{
 }
 }
 
-module.exports = productController 
+module.exports = productController
