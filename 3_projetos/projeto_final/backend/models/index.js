@@ -13,7 +13,7 @@ const sequelize = new Sequelize(
         host: dbConfig.HOST,
         dialect:dbConfig.DIALECT,     
  
-    }   
+    },
     
 )
 sequelize.authenticate() 

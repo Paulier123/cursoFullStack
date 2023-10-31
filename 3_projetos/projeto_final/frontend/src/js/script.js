@@ -21,14 +21,10 @@ const carregarPagina = async () => {
 //pra cada item desse array
     dados.forEach(item => {
         const containerLancamento = document.getElementById('container-lancamento') 
-        const lancamentoElemento = criarLancamento(item)
-        
+        const lancamentoElemento = criarLancamento(item)        
         containerLancamento.append(lancamentoElemento)
         
     })
-}
-function reloadPage(){
-location.reload
 }
 
 //Adicionar novo lançamento
@@ -60,29 +56,30 @@ const novoLancamento = async () =>{
 
 //Deletar lançamento
 
-const excluirLacamento = async () => {    
-    //chamar delete na API
+const excluirLacamento = async () => {
+
+//chamar delete na API
     const txtId = document.querySelector('.txtId').value
     const response = await fetch(`http://localhost:3538/api/products/${txtId}`, {
         method: 'DELETE',
     headers:{
         "Content-Type": 'application/json' 
-}})
+    }
+})
    
 }
+
 // Atualizar lançamento
-
 const atualizaLancamento = async () =>{
-    const id = document.querySelector(Number('.informaID').value)
+    const id = document.querySelector('.informaID').value
     const descricaoAtualizada =document.querySelector('.txtatualizaDescricao')
-    const valorAtulizado = document.querySelector(Number('.txatatualizaValor').value)
+    const valorAtulizado = document.querySelector('.txatatualizaValor').value
     const dataAtualizada = document.querySelector('.txtatualizaData').value
-    
-
+      
     const lancamentoAtualizado = {
-        
+        id:id,
         descricao: String(descricaoAtualizada.value),
-        valor: Number(valorAtulizado).value,
+        valor: valorAtulizado,
         data: dataAtualizada
     }
     const init = { 

@@ -16,39 +16,49 @@
     <main>
         <div class="conteudo">
             <div id="totalLancamentos">
-                <h1>Balanço R$:</h1>
+                <p>
+                    <h1>Balanço R$:</h1>
+                </p>
+                
+                <p>
+                    <div id="displayBalanco">0,00</div>
+                </p>
 
-                <div id="displayBalanco">0,00</div>
+                <input type="button" value="Balanço" class="bttBalanco">
             </div>
 
             <div class="boxLançamento">
                 <h3>
-                    <p>Novo Lançamento: </p>
+                    <p>Novo Lançamento  </p>
                 </h3>
+                <p>Utilize (-) para Despesas</p>
                 <p>
-                    <input type="text" class="textDescricao" placeholder="Descrição">
                     <input type="number" class="textinput" placeholder="valor">
+                    <input type="text" class="textDescricao" placeholder="Descrição">
                     <input type="date" class="textData" placeholder="data">
                 <p>
-                    <input type="button" class="BttReceita" value="Nova Receita (+)">
-                    <input type="button" class="BttDespesa" value="Nova Despesa (-)">
+                    <input type="button" class="BttReceita" value="Novo Lançamento">
+                    
                 </p>
 
                 <hr>
                 <div class="exclusao">
-                    <p><input type="button" value="Excluir lançamento" class="txdelete">
-                    <input type="text" placeholder="informe o ID" class="txtId"></p>
+                    <p><input type="text" placeholder="informe o ID" class="txtId">
+
+                    <input type="button" value="Excluir lançamento" class="txdelete"></p>
+
                 </div>
 
 <hr>
             </div>
            <div class="atualiza">
 
-            <p><input type="button" value="Atualizar lançamento" class="btnAtualiza"></p>
+            
             <input type="text" class="informaID" placeholder="ID do lançamento...">
             <input type="text" class="txtatualizaDescricao" placeholder="Nova Descrição...">
             <input type="text" class="txatatualizaValor" placeholder="Novo Valor...">
             <input type="date" class="txtatualizaData" placeholder="Nova data">
+            <p><input type="button" value="Atualizar lançamento" class="btnAtualiza"></p>
            </div>
             <div>
                 <h2>
