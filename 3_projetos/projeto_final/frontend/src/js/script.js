@@ -1,16 +1,3 @@
-
-const criarLancamento = (item) => {
-    const template = document.getElementById('lacamento-template')
-    const lancamentoElemento = document.importNode(template.content, true)
-    const itens_lancamento = lancamentoElemento.querySelectorAll('span')
-   
-    itens_lancamento[0].innerText = item.descricao
-    itens_lancamento[1].innerText = "R$ "+item.valor
-    itens_lancamento[2].innerText = new Date(item.data).toLocaleDateString('PT-BR')
-    itens_lancamento[3].innerText = item.id
-    return lancamentoElemento
-}
-
 //fetch API comunicação com api
 const carregarPagina = async () => {
 
@@ -27,11 +14,24 @@ const carregarPagina = async () => {
     })
 }
 
+// Criar lançamento
+const criarLancamento = (item) => {
+    const template = document.getElementById('lacamento-template')
+    const lancamentoElemento = document.importNode(template.content, true)
+    const itens_lancamento = lancamentoElemento.querySelectorAll('span')
+   
+    itens_lancamento[0].innerText = item.descricao
+    itens_lancamento[1].innerText = "R$ "+item.valor
+    itens_lancamento[2].innerText = new Date(item.data).toLocaleDateString('PT-BR')
+    itens_lancamento[3].innerText = item.id
+    return lancamentoElemento
+}
+
 //Adicionar novo lançamento
 const novoLancamento = async () =>{
-    const lancamentoNomeDescricao = document.querySelector('.textDescricao')
-    const lancamentoNomeValor = Number(document.querySelector('.textinput').value)
-    const data = document.querySelector('.textData')
+    const lancamentoNomeDescricao = document.getElementById('textDescricao')
+    const lancamentoNomeValor = Number(document.getElementById('textinput').value)
+    const data = document.getElementById('textData')
     const lancamentoNomeData = data.value
     const lancamento = {
         descricao: String(lancamentoNomeDescricao.value),
@@ -59,22 +59,23 @@ const novoLancamento = async () =>{
 const excluirLacamento = async () => {
 
 //chamar delete na API
-    const txtId = document.querySelector('.txtId').value
+   
+    const txtId = document.getElementById('txtId').value
     const response = await fetch(`http://localhost:3538/api/products/${txtId}`, {
         method: 'DELETE',
     headers:{
         "Content-Type": 'application/json' 
-    }
+    } 
 })
-   
+    
 }
 
 // Atualizar lançamento
 const atualizaLancamento = async () =>{
-    const id = document.querySelector('.informaID').value
-    const descricaoAtualizada =document.querySelector('.txtatualizaDescricao')
-    const valorAtulizado = document.querySelector('.txatatualizaValor').value
-    const dataAtualizada = document.querySelector('.txtatualizaData').value
+    const id = document.getElementById('informaID').value
+    const descricaoAtualizada =document.getElementById('txtatualizaDescricao')
+    const valorAtulizado = document.getElementById('txatatualizaValor').value
+    const dataAtualizada = document.getElementById('txtatualizaData').value
       
     const lancamentoAtualizado = {
         id:id,
@@ -93,19 +94,30 @@ const atualizaLancamento = async () =>{
     const response = await fetch(`http://localhost:3538/api/products/${id}`, init)
 }
 
+
 //Carregar página
 window.onload = () => {
     carregarPagina() 
-     
-    const btnNovoLancamento = document.querySelector('.BttReceita')
-    btnNovoLancamento.onclick = novoLancamento
-
-    const btnDelete = document.querySelector('.txdelete')
-    btnDelete.onclick = excluirLacamento
-
-    const btnAtuliza = document.querySelector('.btnAtualiza')
-    btnAtuliza.onclick = atualizaLancamento
-
+    atualiza()   
+    deleta()
     console.log("iniciado") 
 } 
+
+
+const btnNovoLancamento = document.getElementById('BttReceita')
+btnNovoLancamento.onclick = novoLancamento;   
+
+function deleta(){
+    const btnDelete = document.getElementById('txdelete')
+    btnDelete.onclick= excluirLacamento;    
+    
+}
+function atualiza(){
+    
+    const btnAtuliza = document.getElementById('btnAtualiza')
+    btnAtuliza.onclick = atualizaLancamento;     
+
+}
+
+
 

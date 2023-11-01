@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamentos</title>
+</head>
+<body>
+    <main>
+    <div>
+        <div value="bttVoltar"><p><h3><a href="./index.html">Home</a></h3></p></div>
+        <h2>
+
+            <p><h2>Excluir lançamentos</h2></p>
+
+            <div class="exclusao">
+                <p><input type="text" placeholder="Código do lançamento..." id="txtId">
+
+                <input type="button" value="Excluir lançamento" id="txdelete"></p>
+
+        </div>
+
+<hr>
+    </div>
+    <h2>Altera lançamentos</h2>
+
+       <div class="atualiza">        
+        <input type="text" id="informaID" placeholder="Código do lançamento...">
+        <input type="text" id="txtatualizaDescricao" placeholder="Nova Descrição...">
+        <input type="text" id="txatatualizaValor" placeholder="Novo Valor...">
+        <input type="date" id="txtatualizaData" placeholder="Nova data">
+        <p><input type="button" value="Atualizar lançamento" id="btnAtualiza"></p>
+       </div>
+
+    <div>
+            <h2><p>Histórico</p>
+        </h2>
+        <div id="container-lancamento">
+            <template id="lacamento-template">
+
+                <table class="lancamentos">
+                    
+                   
+                    <tr>
+                        <td class="descricao">Descrição do lançamento: <span></span></td>
+                    </tr>
+                    <hr>
+                    <tr>
+                        <td class="valor">Valor : <span></span></td>
+                    </tr>
+
+                    <tr>
+                        <td class="data">Data do lançamento: <span></span></td>
+                    </tr>
+                    <tr>
+                        <td class="id">Código: <span></span></td>
+                    </tr>
+                    
+                </table>
+                
+            </template>
+
+        </div>
+        <div value="bttVoltar"><p><h3><a href="./index.html">Voltar</a></h3></p></div>
+    </div>
+</main>
+
+<footer>
+&copy; - Paulier Rodrigues | 2023
+</footer>
+
+<script src="../src/js/script.js"></script>    
+</body>
+
+</html>
