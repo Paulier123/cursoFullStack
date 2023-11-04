@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lançamentos</title>
+    <link rel="stylesheet" href="../src/css/style.css">
 </head>
 <body>
     <main>
-    <div>
+    <div id="valoresEditaveis">
         <div value="bttVoltar"><p><h3><a href="./index.html">Home</a></h3></p></div>
         <h2>
 
-            <p><h2>Excluir lançamentos</h2></p>
+            <p><h3>Excluir lançamentos</h3></p>
 
             <div class="exclusao">
                 <p><input type="text" placeholder="Código do lançamento..." id="txtId">
@@ -22,7 +23,7 @@
 
 <hr>
     </div>
-    <h2>Altera lançamentos</h2>
+    <h3>Altera lançamentos</h3>
 
        <div class="atualiza">        
         <input type="text" id="informaID" placeholder="Código do lançamento...">
@@ -33,29 +34,26 @@
        </div>
 
     <div>
-            <h2><p>Histórico</p>
-        </h2>
+            <h3><p>Histórico</p>
+        </h3>
         <div id="container-lancamento">
             <template id="lacamento-template">
 
                 <table class="lancamentos">
-                    
+                    <colgroup span="4"></colgroup>
+                        <tr>
+                            <th>Descrição do lançamento</th>                           
+                            <th>Valor</th>                                               
+                            <th>data</th>                      
+                            <th>Código</th>   
+                        </tr>                    
+                        <tr>                      
+                            <td class="descricao"><span></span></td>                                               
+                            <td class="valor"> <span></span></td>                   
+                            <td class="data"><span></span></td>                        
+                            <td class="id"><span></span></td>                        
+                        </tr>                        
                    
-                    <tr>
-                        <td class="descricao">Descrição do lançamento: <span></span></td>
-                    </tr>
-                    <hr>
-                    <tr>
-                        <td class="valor">Valor : <span></span></td>
-                    </tr>
-
-                    <tr>
-                        <td class="data">Data do lançamento: <span></span></td>
-                    </tr>
-                    <tr>
-                        <td class="id">Código: <span></span></td>
-                    </tr>
-                    
                 </table>
                 
             </template>

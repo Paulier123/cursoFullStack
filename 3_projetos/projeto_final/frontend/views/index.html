@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Financeiro</title>
 </head>
-<!-- <link rel="stylesheet" href="../src/css/style.css"> -->
+<link rel="stylesheet" href="../src/css/style.css">
 
 <body>
     <header>
@@ -15,33 +15,40 @@
     </header>
     <main>
         <div class="conteudo">
+            
             <div id="totalLancamentos">
-                <p>
-                    <h1>Balanço R$:</h1>
-                </p>
                 
-                <p>
-                    <div id="displayBalanco">0,00</div>
-                </p>
-
-                <input type="button" value="Balanço" class="bttBalanco">
+                <div id="balancotxt">
+                    <p>
+                        <!-- <h2>Balanço:</h2> -->
+                    </p>
+                    
+                    <p>
+                        <h2>
+                            <div id="displayBalanco">0,00</div>
+                        </h2>
+                    </p>
+                </div>
+              
             </div>
 
-            <div class="boxLançamento">
+            <div id="boxLançamento">
                 <h3>
-                    <p>Novo Lançamento  </p>
+                    <!-- <p>Novo Lançamento</p> -->
                 </h3>
-                <p>Utilize (-) para Despesas</p>
+
+                <!-- <p>Utilize (-) para Despesas</p> -->
+
                 <p>
+                    <input type="text" id="textDescricao" placeholder="Novo lançamento...">
                     <input type="number" id="textinput" placeholder="valor">
-                    <input type="text" id="textDescricao" placeholder="Descrição">
                     <input type="date" id="textData" placeholder="data">
                 <p>
                     <input type="button" id="BttReceita" value="Novo Lançamento">
                     
                 </p>
 
-                <hr>
+                
                 <!-- <div class="exclusao">
                     <p><input type="text" placeholder="informe o ID" class="txtId">
 
@@ -89,10 +96,11 @@
                 </div>
             </div> -->
         
-            <div value="bttIrParaLancamentos"><p><h3><a href="./lancamentos.html">Ir para lançamentos</a></h3></p></div>
+            
+            <div id="bttIrParaLancamentos"><p><h3><a href="./lancamentos.html">Ir para lançamentos</a></h3></p></div>
+    
         </div>
-
-    </main>
+        </main>
     <footer>
         &copy; - Paulier Rodrigues | 2023
     </footer>
