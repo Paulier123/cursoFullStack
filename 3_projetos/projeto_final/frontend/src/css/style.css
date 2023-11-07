@@ -20,13 +20,18 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;  
-    margin: 10px;  
+    margin: 0px;  
 }
 main{
     display: flex;
     flex-direction: column;
     margin: 15px;
     align-items: center;
+    width: 100vw;
+    gap: 10px
+}
+ul{
+    list-style: none;
 }
 footer{
     width: 100vw;
@@ -38,17 +43,56 @@ h2{
     text-align: center;
     
 }
+h3{
+    font-size: 2em;
+    text-align: center;
+
+}
+.painel{
+    background-color: aquamarine;
+    width: 80%;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    
+    border-radius: 10px;
+}
+#cabecalho{
+    margin: 0px;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: aquamarine;
+    height: 40px;
+    padding: 10px;
+    font-size: 1.5em;
+   
+    
+}
+.lancamentosTitulo{
+    width: 80%;
+    height: 50px;
+    background-color: aquamarine;
+    text-align: center;
+    padding: 10px;    
+    border-radius: 10px;
+}
 #container-lancamento{
     width: 100%;
+    margin: 15px;
+    margin-top: 0;
+    
 }
 #lacamento-template{
-    width: 100%;
+    width: 100vw;
+    background-color: aquamarine;
+    box-sizing: 10px;
 }
 table, th, td{    
-    border: 1px solid;
-    border-collapse: collapse;
+    
+   
     width: 90vw;
-    height: 30px;
+    height: 20px;
     background-color: rgb(201, 245, 231);
     padding: 5px;
     text-align: center;
@@ -120,13 +164,122 @@ table, th, td{
 #bttIrParaLancamentos{
    margin-top: 10%;
 }
-#valoresEditaveis{
+
+.excluirEditar{
+    margin: 15px;
+    margin-bottom: 0px;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;   
+    
+}
+
+#valoresEditaveis{
+    width: 800px;
     height: 250px;
+    text-align: center;
+    
+}
+.alteraLancamentos{
+    width: 100%;
+    height: 150px;
+    background-color: aquamarine;
+    text-align: justify;
+    border-radius: 10px;
+    padding: 10px;
 }
 .exclusao{
-    width: 100vw;
-    height: 100%;
+    width: 50%;
+    height: 150px;
     background-color: aquamarine;
-    width: 15vh;
+    text-align: justify; 
+    border-radius: 10px;
+    padding: 10px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+}
+.lancamentosTela{
+    width: 800px;
+    height: 250px;   
+    text-align: center; 
+}
+
+#txtId{
+    width: 45%;
+    height: 30px;
+    font-size: 0.65em;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 5px;
+
+}
+#txdelete{
+    width: 45%;
+    height: 30px;
+    font-size: 0.65em;    
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 5px;
+}
+#informaID{
+    width: 20%;
+    height: 30px;
+    font-size: 0.65em;    
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 5px;
+    padding: 5px;
+}
+#txtatualizaDescricao{
+    width: 75%;
+    height: 30px;
+    font-size: 0.65em;    
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 5px;
+    padding: 5px;
+}
+#txatatualizaValor{
+    width: 20%;
+    height: 30px;
+    font-size: 0.65em;    
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 5px;
+    padding: 5px;
+}
+#txtatualizaData{
+    width: 25%;
+    height: 30px;
+    font-size: 0.65em;    
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 5px;
+    padding: 5px;
+}
+#btnAtualiza{
+    width: 25%;
+    height: 30px;
+    font-size: 0.65em;    
+    border-radius: 5px;
+    font-size: 1em;
+    margin: 5px;
+}
+
+#historico{
+    width: 100%;
+    height: 40px;
+    background-color: aquamarine;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 0;
 }
